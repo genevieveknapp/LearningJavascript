@@ -6,7 +6,7 @@ ourApp.use(express.urlencoded({extended: false}))
 ourApp.get("/",function(req, res){
     res.send(`
     <form action="/answer" method="POST">
-    <p>What color is the body of a columbidae?</p>
+    <p>What color is the body of a columbidae (dove)?</p>
     <input name="doveColor" autocomplete="off">
     <button>Submit Answer</button>
     </form>`)
