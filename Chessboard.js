@@ -23,17 +23,26 @@ for (let i = 0; i < 4; i++) {
 };*/
 
 
-let line = ''
+
 let x = ' '
 let number = 7
 let grid = ''
 
-while (line.length < number) {
-    line = line + x;
+for (let i = 0; i < number; i++){
+    let line = ''
+    while (line.length < number){
+        line = line + x;
+        if (x == ' ') {
+            x = '#'
+        } else if (x == '#'){
+            x = ' '
+        }
+    }
     if (x == ' ') {
         x = '#'
-    } else if (x == '#') {
-        x = ' '
-    }
+    } else if (x == '#'){
+        x = ' '}
+    grid = grid + (line + "\n")
 }
-console.log(line)
+
+console.log(grid)
