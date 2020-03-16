@@ -25,23 +25,26 @@ for (let i = 0; i < 4; i++) {
 
 
 let x = ' '
-let number = 7
+let number = 8
 let grid = ''
+
+function alternateCharacters(){
+    if (x == ' ') {
+        x = '#'
+    } else if (x == '#'){
+        x = ' '
+    }
+}
 
 for (let i = 0; i < number; i++){
     let line = ''
     while (line.length < number){
         line = line + x;
-        if (x == ' ') {
-            x = '#'
-        } else if (x == '#'){
-            x = ' '
-        }
+        alternateCharacters();
     }
-    if (x == ' ') {
-        x = '#'
-    } else if (x == '#'){
-        x = ' '}
+    if (number % 2 == 0){
+        alternateCharacters();
+    }
     grid = grid + (line + "\n")
 }
 
